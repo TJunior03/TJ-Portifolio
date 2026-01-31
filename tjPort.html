@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TJ Portfolio</title>
+
+  <link rel="stylesheet" href="tjPort.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- ================= SECTION 1 (HEADER LIVES HERE) ================= -->
+<section class="section-1" id="home">
+
+  <header class="top-header">
+    <div class="logo">TJ Portfolio</div>
+
+    <div class="sidebar-toggle" onclick="toggleSidebar()">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </header>
+
+  <!-- Sidebar Overlay -->
+  <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <nav>
+      <ul class="menu">
+        <li><a href="#about" onclick="toggleSidebar()"><i class="fa-solid fa-circle-info"></i>About</a></li>
+        <li><a href="#education" onclick="toggleSidebar()"><i class="fa-solid fa-graduation-cap"></i>Education</a></li>
+        <li><a href="#skills" onclick="toggleSidebar()"><i class="fa-solid fa-screwdriver-wrench"></i>Skills</a></li>
+        <li><a href="#projects" onclick="toggleSidebar()"><i class="fa-solid fa-diagram-project"></i>Projects</a></li>
+        <li><a href="#certifications" onclick="toggleSidebar()"><i class="fa-solid fa-certificate"></i>Certifications</a></li>
+        <li><a href="#contact" onclick="toggleSidebar()"><i class="fa-solid fa-phone"></i>Contact</a></li>
+      </ul>
+
+      <div class="sidebar-home">
+        <a href="#home" onclick="toggleSidebar()"><i class="fa-solid fa-house"></i></a>
+      </div>
+    </nav>
+  </aside>
+
+  <!-- HERO CONTENT -->
+  <div class="content">
+
+    <div class="leftSide">
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/taibo-j%C3%BAnior-2a9b9136b/"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.instagram.com/taibo_junior03/"><i class="fab fa-instagram"></i></a>
+        <a href="https://github.com/TJunior03"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+
+    <div class="rightSide">
+      <div class="hero">
+
+        <div class="profile-photo">
+          <img src="Icons (development)/Imagem WhatsApp 2025-07-05 às 09.05.37_21339a98.jpg"
+               alt="Taibo Junior Profile Picture">
+        </div>
+
+        <div class="profile-text">
+          <p class="roles">UI/UX Design • Web Developer • Network Engineer</p>
+          <h1>Taibo Junior</h1>
+
+          <p class="bio">
+           I'm an aspiring UI/UX designer, web developer, and network engineer, currently building my skills and exploring new technologies. My goal is to become a cloud network engineer, and I'm always open to learning and growing. I'm not a pro yet, but with time, dedication, and hands-on experience, I'm gaining more confidence and knowledge every day.
+          </p>
+
+          <div class="buttons">
+            <a href="internship_resume_taibo_junior.html" class="download">Resume</a>
+            <a href="mailto:taibojunior190@gmail.com" class="contact">Contact</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= SECTION 2 ================= -->
+<section class="section-2" id="about">
+  <div class="about-container">
+
+    <div class="about-text">
+      <h2>Who I am</h2>
+      <p>I’m Taibo Junior, originally from Tete, Mozambique, and currently pursuing a degree in Computer Science and Engineering at Parul University in Gujarat, India. </p>
+      <p>I'm passionate about technology and constantly working to improve my skills in UI/UX design, web development, and network engineering. </p>
+      <p>Beyond the tech world, I have a deep interest in history, philosophy, and geo-politics — subjects that help me understand the world from different perspectives and fuel my curiosity for lifelong learning</p>
+    </div>
+
+    <div class="about-illustration">
+      <div class="illustration-circle">
+        <img src="Icons (development)/lucid-origin_Flat_vector_illustration_of_a_black_man_with_short_afro_hair_minimalist_style_mo-0.jpg" alt="Illustration">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= SECTION 3 ================= -->
+<section class="section-3" id="education">
+  <div class="education-container">
+
+    <div class="education-left">
+      <h2>Education</h2>
+
+      <div class="education-card">
+        <div class="edu-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+        <div class="edu-text">
+          <span class="edu-year">2019 - 2023</span>
+          <h3>Higher Secondary Education</h3>
+          <p>Miniarte Primary and Secondary School</p>
+        </div>
+      </div>
+
+      <div class="education-card">
+        <div class="edu-icon"><i class="fa-solid fa-university"></i></div>
+        <div class="edu-text">
+          <span class="edu-year">2024 - Present</span>
+          <h3>Bachelor of Technology</h3>
+          <p>Parul University</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="education-right">
+      <div class="education-circle">
+        <img src="Icons (development)/Hands - Graduate.png" alt="Graduation illustration">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section-4" id="skills">
+  <h2 class="section-title">
+    Technical <span>Skills</span>
+  </h2>
+
+  <div class="skills-grid">
+
+    <!-- Column 1 -->
+    <div class="skills-column">
+      <div class="skill-card"><i class="fa-brands fa-java"></i> Java</div>
+      <div class="skill-card"><i class="fa-brands fa-html5"></i> HTML</div>
+      <div class="skill-card"><i class="fa-brands fa-css3-alt"></i> CSS</div>
+      <div class="skill-card"><i class="fa-solid fa-c"></i> C</div>
+    </div>
+
+    <!-- Column 2 -->
+    <div class="skills-column">
+      <div class="skill-card"><i class="fa-solid fa-code"></i> C++</div>
+      <div class="skill-card"><i class="fa-solid fa-database"></i> MySQL</div>
+      <div class="skill-card"><i class="fa-solid fa-database"></i> PostgreSQL</div>
+      <div class="skill-card"><i class="fa-brands fa-git-alt"></i> Git</div>
+    </div>
+
+    <!-- Column 3 -->
+    <div class="skills-column">
+      <div class="skill-card"><i class="fa-brands fa-github"></i> GitHub</div>
+      <div class="skill-card"><i class="fa-solid fa-code"></i> VS Code</div>
+      <div class="skill-card"><i class="fa-brands fa-figma"></i> Figma</div>
+      <div class="skill-card"><i class="fa-solid fa-palette"></i> Canva</div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section-5" id="projects">
+  <h2 class="section-title">Projects</h2>
+
+  <div class="projects-container">
+
+    <div class="project-card">
+      <h3 class="project-title">Attendance Hunters</h3>
+
+      <div class="project-icon">
+        <i class="fa-solid fa-chart-line"></i>
+      </div>
+
+     <button class="project-link" aria-label="View Project" onclick="openProjectModal()">
+      <i class="fa-solid fa-arrow-right"></i>
+      </button>
+
+
+  </div>
+</section>
+
+<section class="section-6" id="certifications">
+  <h2 class="section-title teal">Certifications</h2>
+
+  <div class="certifications-container">
+
+    <!-- CERT 1 -->
+    <div class="cert-card">
+      <div class="cert-header">
+        <h3>Operating<br>Systems<br>Basics</h3>
+
+        <div class="cert-badge">
+          <img src="Icons (development)/cisco.png" alt="Cisco">
+        </div>
+      </div>
+
+      <a href="Operating_Systems_Basics_certificate_taibojunior190-gmail-com_72a5362c-e305-4e71-9aae-a1669ec8d306 (1).pdf" class="cert-link">
+        View Certificate →
+      </a>
+    </div>
+
+    <!-- CERT 2 -->
+    <div class="cert-card">
+      <div class="cert-header">
+        <h3>Pyhton<br>Essentials 1</h3>
+
+        <div class="cert-badge">
+          <img src="Icons (development)/cisco.png" alt="Cisco">
+        </div>
+      </div>
+
+      <a href="Python_Essentials_1_certificate_taibojunior190-gmail-com_54b46372-88c7-4188-8d6a-a643212d6591 (1).pdf" class="cert-link">
+        View Certificate →
+      </a>
+    </div>
+
+    <!-- CERT 3 (optional) -->
+    <div class="cert-card">
+      <div class="cert-header">
+        <h3>Certification of<br>Participation - Vadodara Hackathon 6.0</h3>
+
+        <div class="cert-badge">
+          <img src="Icons (development)/Captura de ecrã 2026-01-30 135706.png" alt="Linux">
+        </div>
+      </div>
+
+      <a href="Certificate of Participation-Taibo Ahamada Taibo Junior.pdf" class="cert-link">
+        View Certificate →
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="section-7" id="contact">
+  <h2 class="contact-title">Contact</h2>
+
+  <div class="contact-container">
+
+    <!-- LEFT: FORM -->
+    <form class="contact-form" id="contactForm">
+      <label>Name</label>
+      <input type="text" name="name" required/>
+
+      <label>E-mail</label>
+      <input type="email" name="email" required/>
+
+      <label>Type a message</label>
+      <textarea name="message" required></textarea>
+
+      <button type="submit">
+        Send
+        <span>➤</span>
+      </button>
+    </form>
+<!-- RIGHT: INFO -->
+<div class="contact-info">
+
+  <div class="info-line">
+    <div class="icon">✉️</div>
+    <p>taibojunior190@gmail.com</p>
+  </div>
+
+  <div class="info-line">
+    <div class="icon">📞</div>
+    <p>+91814139077</p>
+  </div>
+
+  <div class="social-cards">
+
+    <a href="https://www.linkedin.com/in/taibo-j%C3%BAnior-2a9b9136b/" class="info-card">
+      <div class="social-card">
+        <div class="social-icon">in</div>
+        <div>
+          <h4>LinkedIn</h4>
+          <p>Professional Profile</p>
+        </div>
+      </div>
+    </a>
+
+    <a href="https://www.instagram.com/taibo_junior03/" class="info-card">
+      <div class="social-card">
+        <div class="social-icon"><i class="fab fa-instagram"></i></div>
+        <div>
+          <h4>Instagram</h4>
+          <p>Social Media</p>
+        </div>
+      </div>
+    </a>
+
+    <a href="https://github.com/TJunior03" class="info-card">
+      <div class="social-card">
+        <div class="social-icon"><i class="fab fa-github"></i></div>
+        <div>
+          <h4>GitHub</h4>
+          <p>Code Repository</p>
+        </div>
+      </div>
+    </a>
+
+  </div>
+</div>
+</section>
+
+
+<script>
+  function toggleSidebar() {
+    document.getElementById("sidebar").classList.toggle("open");
+    document.getElementById("overlay").classList.toggle("show");
+  }
+  
+   function openProjectModal() {
+    document.getElementById("projectModal").style.display = "flex";
+    document.body.classList.add("modal-open");
+  }
+
+  function closeProjectModal() {
+    document.getElementById("projectModal").style.display = "none";
+    document.body.classList.remove("modal-open");
+  }
+</script>
+
+<!-- ================= PROJECT MODAL ================= -->
+<div id="projectModal" class="modal-overlay">
+
+  <div class="modal-box">
+    <span class="modal-close" onclick="closeProjectModal()">&times;</span>
+
+    <h2>Attendance Hunters</h2>
+
+    <p class="modal-description">
+      Attendance Hunters is a full-stack attendance management system designed
+      for educational institutions. It supports role-based access for students,
+      staff, and administrators, enabling efficient attendance tracking and
+      management.
+    </p>
+
+    <h3>Tech Stack</h3>
+    <ul>
+      <li>Frontend: React, Tailwind CSS</li>
+      <li>Backend: Node.js, Express</li>
+      <li>Database: PostgreSQL (Neon)</li>
+      <li>ORM: Prisma</li>
+      <li>Authentication: JWT & bcrypt</li>
+      <li>Deployment: Vercel</li>
+    </ul>
+
+    <h3>My Contribution</h3>
+    <ul>
+      <li>Database schema & Prisma models</li>
+      <li>Local testing & debugging</li>
+    </ul>
+
+    <div class="modal-actions">
+      <a href="https://attendance-fullstack-obg8.vercel.app/" target="_blank" class="modal-btn primary">
+        Live Project
+      </a>
+      <a href="https://github.com/TJunior03/attendance-hunters" target="_blank" class="modal-btn secondary">
+        GitHub Repo
+      </a>
+    </div>
+  </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+  (function() {
+    emailjs.init("EAVprQfiyt3FZm-FJ");
+  })();
+</script>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  emailjs.sendForm(
+    "service_74hq803",
+    "template_5pfhlmm",
+    this
+  ).then(
+    function() {
+      alert("Message sent successfully!");
+    },
+    function(error) {
+      alert("Failed to send message.");
+      console.log(error);
+    }
+  );
+});
+</script>
+
+</body>
+</html>
+

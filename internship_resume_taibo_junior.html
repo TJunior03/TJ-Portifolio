@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Taibo A. T. Junior | Internship Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #4f46e5;
+      --dark: #0f172a;
+      --gray: #475569;
+      --bg: #f8fafc;
+      --card: #ffffff;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+    a { color: rgb(181, 207, 244); text-decoration: none; }
+
+    header {
+      background: linear-gradient(135deg, var(--primary), #6366f1);
+      color: white;
+      padding: 4rem 1.5rem;
+      text-align: center;
+    }
+    header h1 { font-size: 2.6rem; font-weight: 700; }
+    header p { margin-top: .8rem; font-size: 1.1rem; opacity: .95; }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem 1.5rem 4rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: -3rem;
+    }
+
+    .card {
+      background: var(--card);
+      padding: 1.5rem;
+      border-radius: 1.25rem;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    }
+    .card h2 {
+      font-size: 1.2rem;
+      margin-bottom: .8rem;
+      color: var(--primary);
+    }
+    .card p, .card li { font-size: .95rem; color: var(--gray); }
+    .card ul { padding-left: 1.2rem; }
+
+    section { margin-top: 3rem; }
+    section h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+    }
+
+    .project {
+      background: var(--card);
+      padding: 1.8rem;
+      border-radius: 1.5rem;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.06);
+    }
+    .project h3 { margin-bottom: .5rem; }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem;
+      margin-top: .8rem;
+    }
+    .tag {
+      background: #eef2ff;
+      color: var(--primary);
+      padding: .3rem .7rem;
+      border-radius: 999px;
+      font-size: .75rem;
+      font-weight: 500;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 4rem;
+      font-size: .9rem;
+      color: var(--gray);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Taibo Ahamada Taibo Junior</h1>
+  <p>Computer Science Undergraduate | Aspiring Software & Network Intern</p>
+  <p>Vadodara, Gujarat · <a href="mailto:taibojunior190@gmail.com">taibojunior190@gmail.com</a></p>
+</header>
+
+<div class="container">
+  <div class="cards">
+    <div class="card">
+      <h2>Career Objective</h2>
+      <p>Motivated Computer Science undergraduate seeking internship opportunities to apply programming, problem-solving, and teamwork skills while learning from real-world engineering challenges.</p>
+    </div>
+    <div class="card">
+      <h2>Education</h2>
+      <p><strong>B.Tech – Computer Science & Engineering</strong><br/>Parul University (2nd Year)<br/>Expected Graduation: 2028</p>
+      <p style="margin-top:.6rem;">🏆 Certificate of Achievement – Vadodara Hackathon 6.0</p>
+    </div>
+    <div class="card">
+      <h2>Contact</h2>
+      <p>📞 +91 81411 39077 / +258 847255056</p>
+      <p>🔗 <a href="https://www.linkedin.com/in/taibo-j%C3%BAnior-2a9b9136b/" target="_blank">LinkedIn</a></p>
+      <p>💻 <a href="https://github.com/TJunior03" target="_blank">GitHub</a></p>
+    </div>
+  </div>
+
+  <section>
+    <h2>Featured Project</h2>
+    <div class="project">
+      <h3>Attendance Hunters</h3>
+      <p>A full-stack attendance management system designed for educational institutions. Built to improve efficiency and accuracy using QR-code scanning and geo-referencing, with role-based access for students, staff, and administrators.</p>
+      <ul style="margin-top:.8rem;">
+        <li>Developed frontend interfaces and backend APIs in a student team</li>
+        <li>Implemented modern authentication and attendance workflows</li>
+        <li>Collaborated using task-based development and problem-solving</li>
+      </ul>
+      <div class="tags">
+        <span class="tag">React</span>
+        <span class="tag">Tailwind CSS</span>
+        <span class="tag">Node.js</span>
+        <span class="tag">Express</span>
+        <span class="tag">PostgreSQL</span>
+      </div>
+      <p style="margin-top:1rem;">🔗 <a href="https://attendance-fullstack-obg8.vercel.app/" target="_blank">View Live Project</a></p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Skills & Certifications</h2>
+    <div class="cards">
+      <div class="card">
+        <h2>Technical Skills</h2>
+        <p><strong>Programming:</strong> Java, Python</p>
+        <p><strong>Web:</strong> HTML, CSS, React (Basics)</p>
+        <p><strong>Databases:</strong> MySQL, PostgreSQL</p>
+        <p><strong>Tools:</strong> Git, Figma, Canva</p>
+      </div>
+      <div class="card">
+        <h2>Certifications</h2>
+        <p>✔ Operating Systems Basics – CISCO</p>
+        <p>✔ Python Essentials 1 – CISCO</p>
+        <p>⏳ Network Basics – CISCO</p>
+        <p>⏳ Computer Networks & IP – NPTEL</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Leadership & Interests</h2>
+    <div class="card">
+      <p>• Participant – Vadodara Hackathon 6.0</p>
+      <p>• Strong teamwork, critical thinking, and collaborative problem-solving skills</p>
+      <p>• Cultural Club member; interests in philosophy, history, and geopolitics</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 · Designed & built by Taibo Junior</p>
+  </footer>
+</div>
+
+</body>
+</html>
