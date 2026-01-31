@@ -1,3 +1,4 @@
+
 html {
   scroll-behavior: smooth;
 }
@@ -931,4 +932,442 @@ body.modal-open section {
 
 .info-card:hover {
   transform: translateY(-6px);
+}
+
+@media (max-width: 768px) {
+/* Prevent horizontal scrolling on mobile */
+html, body {
+overflow-x: hidden;
+-webkit-overflow-scrolling: touch;
+}
+
+/* Header adjustments */
+.section-1 header {
+height: 64px;
+padding: 0 16px;
+align-items: center;
+}
+
+.top-header {
+padding: 12px 16px;
+}
+
+.logo {
+font-size: 1.1rem;
+}
+
+.sidebar {
+/* mobile: make the sidebar slide as an overlay but keep desktop unaffected */
+width: 86%;
+max-width: 320px;
+left: -100%;
+border-radius: 0;
+padding: 40px 18px;
+}
+
+.sidebar.open {
+left: 0;
+}
+
+.menu {
+gap: 16px;
+width: 100%;
+display: flex;
+flex-direction: column;
+}
+
+.menu li a {
+width: 100%;
+padding: 12px 14px;
+border-radius: 12px;
+justify-content: flex-start;
+}
+
+/* Main layout: stack columns vertically for mobile */
+.content {
+flex-direction: column;
+padding-top: 64px; /* leave room for header */
+}
+
+.leftSide {
+display: none;
+}
+
+.rightSide {
+width: 100%;
+padding-left: 20px;
+padding-right: 20px;
+}
+
+/* Hero layout */
+.hero {
+margin-left: 0 !important; /* override desktop negative offset */
+flex-direction: column;
+gap: 20px;
+align-items: center;
+max-width: 100%;
+padding: 8px 0;
+}
+
+.profile-area {
+max-width: 100%;
+width: 100%;
+padding: 0 6px;
+}
+
+.profile-photo {
+width: 180px;
+height: 180px;
+margin: 0 auto;
+}
+
+.profile-photo img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+display: block;
+}
+
+.profile-text {
+text-align: center;
+padding: 0 6px;
+}
+
+.profile-text h1 {
+font-size: 2rem;
+margin-bottom: 10px;
+}
+
+.roles, .bio {
+font-size: 0.95rem;
+line-height: 1.5;
+}
+
+.buttons {
+justify-content: center;
+gap: 12px;
+flex-wrap: wrap;
+width: 100%;
+}
+
+.buttons a {
+display: inline-block;
+width: calc(50% - 10px);
+min-width: 140px;
+box-sizing: border-box;
+text-align: center;
+padding: 10px 12px;
+font-size: 1rem;
+}
+
+/* Stack buttons vertically on very small screens */
+@media (max-width: 380px) {
+.buttons a {
+width: 100%;
+}
+}
+
+/* ABOUT */
+.about-container {
+flex-direction: column;
+gap: 24px;
+padding: 0;
+}
+
+.section-2{
+  padding: 80px 50px;
+}
+
+.about-text {
+max-width: 100%;
+}
+
+.about-text p{
+  text-align: center;
+}
+
+.about-text h2 {
+font-size: 1.8rem;
+margin-bottom: 14px;
+}
+
+.illustration-circle {
+width: 180px;
+height: 180px;
+margin: 0 auto;
+}
+
+/* EDUCATION */
+.education-container {
+flex-direction: column;
+gap: 24px;
+}
+
+.education-right {
+display: none;
+}
+
+.education-card {
+width: 100%;
+padding: 16px;
+border-radius: 12px;
+}
+
+/* SKILLS */
+.skills-grid {
+grid-template-columns: 1fr;
+gap: 18px;
+padding: 0;
+}
+
+.skill-card {
+padding: 12px 18px;
+border-radius: 12px;
+gap: 12px;
+font-size: 0.95rem;
+}
+
+/* PROJECTS */
+.projects-container {
+flex-direction: column;
+gap: 18px;
+}
+
+.project-card {
+width: 100%;
+height: auto;
+padding: 18px;
+border-radius: 14px;
+}
+
+.project-icon i {
+font-size: 3.2rem;
+}
+
+.project-link {
+bottom: 14px;
+right: 14px;
+width: 40px;
+height: 40px;
+}
+
+/* MODAL */
+.modal-overlay {
+align-items: flex-start;
+padding-top: 40px;
+}
+
+.modal-box {
+width: 94%;
+max-width: 640px;
+max-height: 92vh;
+overflow-y: auto;
+border-radius: 12px;
+padding: 20px;
+}
+
+.modal-close {
+top: 10px;
+right: 12px;
+}
+
+/* CERTIFICATIONS */
+.certifications-container {
+flex-direction: column;
+gap: 18px;
+align-items: center;
+}
+
+.cert-card {
+width: calc(100% - 20px);
+max-width: 420px;
+padding: 18px;
+border-radius: 12px;
+}
+
+.cert-badge {
+width: 72px;
+height: 46px;
+border-radius: 10px;
+}
+
+/* CONTACT */
+.section-7 {
+padding: 60px 20px;
+}
+
+.contact-container {
+flex-direction: column;
+gap: 20px;
+}
+
+.contact-form {
+width: 100%;
+padding: 0;
+}
+
+.contact-form input,
+.contact-form textarea {
+width: 100%;
+padding: 12px;
+border-radius: 10px;
+font-size: 0.95rem;
+}
+
+.contact-form button {
+width: 100%;
+max-width: 320px;
+border-radius: 28px;
+}
+
+.contact-info {
+width: 100%;
+}
+
+.social-cards,
+.social-cards .social-card {
+width: 100%;
+display: flex;
+flex-direction: column;
+gap: 12px;
+}
+
+.social-card {
+padding: 12px 14px;
+width: 100%;
+border-radius: 12px;
+}
+
+.social-icon {
+width: 44px;
+height: 44px;
+border-radius: 0; /* keep square icon */
+flex-shrink: 0;
+}
+
+/* small spacing / typography tweaks */
+.section-title {
+font-size: 2rem;
+margin-bottom: 30px;
+}
+
+.section-5 .section-title,
+.section-6 .section-title {
+font-size: 1.8rem;
+margin-bottom: 28px;
+}
+
+section {
+padding: 40px 16px;
+}
+
+/* Ensure section containers allow card shadows and rounded corners to show */
+.section-3,
+.section-5,
+.section-6 {
+overflow: visible;
+padding-left: 20px;
+padding-right: 20px;
+}
+
+/* Make card containers stack and use available width */
+.education-container,
+.certifications-container,
+.projects-container {
+width: 100%;
+max-width: 760px;
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 18px;
+box-sizing: border-box;
+padding: 0 8px;
+}
+
+/* Core card fixes: full (or near-full) width, no fixed heights, visible overflow */
+.education-card,
+.cert-card,
+.project-card {
+width: calc(100% - 32px);
+max-width: 520px;
+margin: 0 auto;
+padding: 16px;
+box-sizing: border-box;
+height: auto !important;
+min-height: 0 !important;
+border-radius: 12px !important;
+overflow: visible !important;
+box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+}
+
+/* Ensure elements inside cards do not collapse or overlap */
+.education-card > *,
+.cert-card > *,
+.project-card > * {
+box-sizing: border-box;
+}
+
+/* Keep icons aligned and visible (prevent shrinking that causes layout issues) */
+.edu-icon,
+.cert-badge,
+.project-icon,
+.project-link {
+flex-shrink: 0;
+}
+
+/* Make icon blocks fit the stacked card layout */
+.edu-icon {
+width: 48px;
+height: 48px;
+margin-right: 14px;
+}
+
+.cert-badge {
+width: 72px;
+height: 46px;
+margin-left: 8px;
+}
+
+.project-icon {
+margin-top: 6px;
+}
+
+/* Project card: avoid fixed height and allow content to center naturally */
+.project-card {
+height: auto;
+padding-bottom: 20px;
+}
+
+/* Ensure card text isn't compressed and aligns nicely */
+.edu-text,
+.cert-header,
+.project-title,
+.edu-text h3,
+.edu-text p,
+.cert-header h3 {
+text-align: left;
+margin: 0;
+line-height: 1.35;
+}
+
+/* If any card used absolute positioning for small elements, keep them visible */
+.project-link {
+position: absolute;
+right: 16px;
+bottom: 14px;
+width: 40px;
+height: 40px;
+}
+
+/* Small viewport adjustment: full-width on very small phones */
+@media (max-width: 400px) {
+.education-card,
+.cert-card,
+.project-card {
+width: calc(100% - 20px);
+padding: 14px;
+border-radius: 10px;
+}
+
+}
 }
