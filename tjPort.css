@@ -378,7 +378,8 @@ body{
 
 
 .education-left {
-  width: 60%;
+  flex: 1 1 0;
+  min-width: 0;
 }
 
 .education-left h2 {
@@ -435,14 +436,15 @@ body{
 }
 
 .education-right {
-  width: 40%;
+  flex: 0 1 320px;
   display: flex;
   justify-content: center;
 }
 
 .education-circle {
-  width: 320px;
-  height: 320px;
+  width: min(320px, 100%);
+  aspect-ratio: 1;
+  height: auto;
   background: #d9d9d9;
   border-radius: 50%;
   display: flex;
@@ -1379,4 +1381,89 @@ border-radius: 10px;
 }
 
 }
+}
+
+/* Education layout: keep the two-column composition comfortable on tablets. */
+@media (min-width: 769px) and (max-width: 1100px) {
+  .section-3 {
+    padding: 72px 64px;
+  }
+
+  .education-container {
+    gap: 40px;
+  }
+
+  .education-circle {
+    width: min(280px, 100%);
+  }
+}
+
+@media (min-width: 769px) and (max-width: 900px) {
+  .section-3 {
+    min-height: auto;
+    padding: 64px 40px;
+  }
+
+  .education-container {
+    max-width: 640px;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .education-left {
+    width: 100%;
+  }
+
+  .education-left h2 {
+    text-align: center;
+  }
+
+  .education-right {
+    display: none;
+  }
+}
+
+/* Education layout: cards need the full content width once the illustration is hidden. */
+@media (max-width: 768px) {
+  .section-3 {
+    min-height: auto;
+    padding: 64px 20px;
+  }
+
+  .education-container {
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 0;
+    align-items: stretch;
+  }
+
+  .education-left {
+    width: 100%;
+  }
+
+  .education-left h2 {
+    font-size: clamp(2rem, 9vw, 2.5rem);
+    margin-bottom: 28px;
+    text-align: center;
+  }
+
+  .education-card {
+    width: 100%;
+    max-width: none;
+    margin: 0 0 18px;
+    padding: 18px;
+    gap: 14px;
+  }
+
+  .edu-text {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .edu-text h3,
+  .edu-text p {
+    overflow-wrap: anywhere;
+  }
 }
