@@ -1543,3 +1543,52 @@ textarea:focus-visible {
     text-align: center;
   }
 }
+
+/* Keep education cards readable on narrow screens. */
+@media (max-width: 768px) {
+  .section-3 {
+    min-height: auto;
+    padding: 64px 20px;
+  }
+
+  .education-container {
+    display: block;
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .education-left {
+    width: 100%;
+  }
+
+  .education-right {
+    display: none;
+  }
+
+  .education-left h2 {
+    margin-bottom: 28px;
+    font-size: clamp(2rem, 9vw, 2.5rem);
+    text-align: center;
+  }
+
+  .education-card {
+    display: flex;
+    width: 100% !important;
+    max-width: none;
+    margin: 0 0 18px;
+    padding: 18px;
+    gap: 14px;
+  }
+
+  .edu-text {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .edu-text h3,
+  .edu-text p {
+    overflow-wrap: anywhere;
+  }
+}
