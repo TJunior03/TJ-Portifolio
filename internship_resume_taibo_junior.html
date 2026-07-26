@@ -1,181 +1,819 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Taibo A. T. Junior | Internship Resume</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --primary: #4f46e5;
-      --dark: #0f172a;
-      --gray: #475569;
-      --bg: #f8fafc;
-      --card: #ffffff;
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: var(--bg);
-      color: var(--dark);
-      line-height: 1.6;
-    }
-    a { color: rgb(181, 207, 244); text-decoration: none; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taibo Junior - Computer Science & Engineering Resume</title> <!-- -->
+    <meta name="description" content="Resume of Taibo Junior, Computer Science & Engineering Student specializing in Software Engineering, Cloud Networking, and Web Development."> <!-- -->
 
-    header {
-      background: linear-gradient(135deg, var(--primary), #6366f1);
-      color: white;
-      padding: 4rem 1.5rem;
-      text-align: center;
-    }
-    header h1 { font-size: 2.6rem; font-weight: 700; }
-    header p { margin-top: .8rem; font-size: 1.1rem; opacity: .95; }
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Taibo Junior - Resume"> <!-- -->
+    <meta property="og:description" content="Computer Science & Engineering Student passionate about building reliable software and cloud network solutions."> <!-- -->
+    <meta property="og:type" content="website">
 
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 2rem 1.5rem 4rem;
-    }
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      margin-top: -3rem;
-    }
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    .card {
-      background: var(--card);
-      padding: 1.5rem;
-      border-radius: 1.25rem;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-    }
-    .card h2 {
-      font-size: 1.2rem;
-      margin-bottom: .8rem;
-      color: var(--primary);
-    }
-    .card p, .card li { font-size: .95rem; color: var(--gray); }
-    .card ul { padding-left: 1.2rem; }
+    <style>
+        /* CSS RESET & VARIABLES */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-    section { margin-top: 3rem; }
-    section h2 {
-      font-size: 1.6rem;
-      margin-bottom: 1rem;
-    }
+        :root {
+            --primary: #2563EB;
+            --primary-hover: #1D4ED8;
+            --background: #F8FAFC;
+            --card-bg: #FFFFFF;
+            --text-main: #0F172A;
+            --text-secondary: #475569;
+            --border-color: #E2E8F0;
+            --accent: #3B82F6;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --radius-full: 9999px;
+            --font-main: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            --max-width: 860px;
+        }
 
-    .project {
-      background: var(--card);
-      padding: 1.8rem;
-      border-radius: 1.5rem;
-      box-shadow: 0 15px 30px rgba(0,0,0,0.06);
-    }
-    .project h3 { margin-bottom: .5rem; }
+        html {
+            scroll-behavior: smooth;
+        }
 
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: .5rem;
-      margin-top: .8rem;
-    }
-    .tag {
-      background: #eef2ff;
-      color: var(--primary);
-      padding: .3rem .7rem;
-      border-radius: 999px;
-      font-size: .75rem;
-      font-weight: 500;
-    }
+        body {
+            font-family: var(--font-main);
+            background-color: var(--background);
+            color: var(--text-main);
+            line-height: 1.6;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            padding: 2rem 1rem;
+        }
 
-    footer {
-      text-align: center;
-      margin-top: 4rem;
-      font-size: .9rem;
-      color: var(--gray);
-    }
-  </style>
+        /* CONTAINER */
+        .resume-container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+
+        /* CARD BASE */
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 2rem;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+            border-color: #CBD5E1;
+        }
+
+        /* TYPOGRAPHY HELPER CLASSES */
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.625rem;
+            letter-spacing: -0.02em;
+        }
+
+        .section-title i {
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
+
+        /* BUTTONS & PILLS */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            padding: 0.625rem 1.25rem;
+            border-radius: var(--radius-sm);
+            text-decoration: none;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            border: 1px solid transparent;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: #FFFFFF;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .btn-secondary {
+            background-color: #FFFFFF;
+            color: var(--text-main);
+            border-color: var(--border-color);
+        }
+
+        .btn-secondary:hover {
+            background-color: #F1F5F9;
+            border-color: #CBD5E1;
+            color: var(--primary);
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.375rem;
+            background-color: #EFF6FF;
+            color: var(--primary);
+            border: 1px solid #BFDBFE;
+            padding: 0.25rem 0.75rem;
+            border-radius: var(--radius-full);
+            font-size: 0.75rem;
+            font-weight: 600;
+            width: fit-content;
+        }
+
+        .badge-dot {
+            width: 6px;
+            height: 6px;
+            background-color: var(--primary);
+            border-radius: 50%;
+        }
+
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            background-color: #F1F5F9;
+            color: var(--text-secondary);
+            font-size: 0.8125rem;
+            font-weight: 500;
+            padding: 0.25rem 0.625rem;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border-color);
+        }
+
+        /* HERO SECTION */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .hero-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .hero-title-group h1 {
+            font-size: 2.25rem;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            color: var(--text-main);
+            line-height: 1.2;
+        }
+
+        .hero-title-group p {
+            font-size: 1.125rem;
+            font-weight: 500;
+            color: var(--primary);
+            margin-top: 0.25rem;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 0.75rem;
+            margin-top: 0.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+
+        .contact-item a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .contact-item a:hover {
+            color: var(--primary);
+        }
+
+        .contact-item i {
+            width: 16px;
+            color: var(--text-secondary);
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        /* ABOUT ME */
+        .about-text {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* EDUCATION */
+        .education-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .institution {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .degree {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .grad-date {
+            font-size: 0.85rem;
+            color: var(--primary);
+            font-weight: 600;
+            background: #EFF6FF;
+            padding: 0.2rem 0.6rem;
+            border-radius: var(--radius-sm);
+        }
+
+        .coursework-title {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--text-main);
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .coursework-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        /* FEATURED PROJECT */
+        .project-card {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .project-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .project-description {
+            color: var(--text-secondary);
+            font-size: 0.9375rem;
+        }
+
+        .features-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.375rem;
+            margin: 0.5rem 0;
+        }
+
+        .features-list li {
+            position: relative;
+            padding-left: 1.25rem;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+
+        .features-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0.25rem;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.25rem;
+        }
+
+        .project-actions {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: 0.5rem;
+        }
+
+        /* TECHNICAL SKILLS */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.25rem;
+        }
+
+        .skill-category-title {
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-secondary);
+            margin-bottom: 0.75rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.25rem;
+        }
+
+        .skill-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.375rem;
+        }
+
+        /* CERTIFICATIONS & ACHIEVEMENTS */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1rem;
+        }
+
+        .cert-card {
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            padding: 1rem;
+            background-color: #FAFAFA;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .cert-icon {
+            font-size: 1.25rem;
+            color: var(--primary);
+            background: #FFFFFF;
+            padding: 0.5rem;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border-color);
+        }
+
+        .cert-name {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .cert-status {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+
+        .achievement-text {
+            color: var(--text-secondary);
+            font-size: 0.9375rem;
+        }
+
+        /* TWO COLUMN LAYOUT (SOFT SKILLS & LANGUAGES) */
+        .two-column-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        @media (max-width: 640px) {
+            .two-column-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* CONTACT SECTION */
+        .contact-card {
+            text-align: center;
+            background: linear-gradient(180deg, #FFFFFF 0%, #F1F5F9 100%);
+            border: 1px solid var(--border-color);
+        }
+
+        .contact-card .section-title {
+            justify-content: center;
+        }
+
+        .contact-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            max-width: 500px;
+            margin: 0 auto 1.5rem auto;
+        }
+
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            font-size: 0.8125rem;
+            color: var(--text-secondary);
+            margin-top: 1rem;
+            padding-bottom: 2rem;
+        }
+
+        /* PRINT STYLESHEET */
+        @media print {
+            body {
+                background-color: #FFFFFF;
+                color: #000000;
+                padding: 0;
+                font-size: 12pt;
+            }
+            .resume-container {
+                gap: 1.25rem;
+                max-width: 100%;
+            }
+            .card {
+                border: none;
+                box-shadow: none;
+                padding: 0;
+            }
+            .card:hover {
+                transform: none;
+                box-shadow: none;
+            }
+            .btn, .badge {
+                border: 1px solid #000;
+                color: #000;
+                background: none;
+            }
+            .hero-actions, .project-actions, .contact-buttons {
+                display: none;
+            }
+        }
+    </style>
 </head>
 <body>
 
-<header>
-  <h1>Taibo Ahamada Taibo Junior</h1>
-  <p>Computer Science Undergraduate | Aspiring Software & Network Intern</p>
-  <p>Vadodara, Gujarat · <a href="mailto:taibojunior190@gmail.com">taibojunior190@gmail.com</a></p>
-</header>
+    <main class="resume-container">
 
-<div class="container">
-  <div class="cards">
-    <div class="card">
-      <h2>Career Objective</h2>
-      <p>Motivated Computer Science undergraduate seeking internship opportunities to apply programming, problem-solving, and teamwork skills while learning from real-world engineering challenges.</p>
-    </div>
-    <div class="card">
-      <h2>Education</h2>
-      <p><strong>B.Tech – Computer Science & Engineering</strong><br/>Parul University (2nd Year)<br/>Expected Graduation: 2028</p>
-      <p style="margin-top:.6rem;">🏆 Certificate of Achievement – Vadodara Hackathon 6.0</p>
-    </div>
-    <div class="card">
-      <h2>Contact</h2>
-      <p>📞 +91 81411 39077 / +258 847255056</p>
-      <p>🔗 <a href="https://www.linkedin.com/in/taibo-j%C3%BAnior-2a9b9136b/" target="_blank">LinkedIn</a></p>
-      <p>💻 <a href="https://github.com/TJunior03" target="_blank">GitHub</a></p>
-    </div>
-  </div>
+        <!-- HERO SECTION -->
+        <header class="card hero" aria-label="Candidate Overview">
+            <div class="hero-header">
+                <div class="hero-title-group">
+                    <h1>Taibo Junior</h1> <!-- -->
+                    <p>Computer Science & Engineering Student</p> <!-- -->
+                </div>
+                <div class="badge" aria-label="Status">
+                    <span class="badge-dot" aria-hidden="true"></span>
+                    <span>Open to Internship Opportunities</span>
+                </div>
+            </div>
 
-  <section>
-    <h2>Featured Project</h2>
-    <div class="project">
-      <h3>Attendance Hunters</h3>
-      <p>A full-stack attendance management system designed for educational institutions. Built to improve efficiency and accuracy using QR-code scanning and geo-referencing, with role-based access for students, staff, and administrators.</p>
-      <ul style="margin-top:.8rem;">
-        <li>Developed frontend interfaces and backend APIs in a student team</li>
-        <li>Implemented modern authentication and attendance workflows</li>
-        <li>Collaborated using task-based development and problem-solving</li>
-      </ul>
-      <div class="tags">
-        <span class="tag">React</span>
-        <span class="tag">Tailwind CSS</span>
-        <span class="tag">Node.js</span>
-        <span class="tag">Express</span>
-        <span class="tag">PostgreSQL</span>
-      </div>
-      <p style="margin-top:1rem;">🔗 <a href="https://attendance-fullstack-obg8.vercel.app/" target="_blank">View Live Project</a></p>
-    </div>
-  </section>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                    <span>Vadodara, Gujarat, India</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                    <a href="mailto:taibojunior190@gmail.com" aria-label="Send Email">taibojunior190@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-brands fa-github" aria-hidden="true"></i>
+                    <a href="https://github.com/TJunior03" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">github.com/TJunior03</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                    <a href="https://linkedin.comin/taibo-júnior-2a9b9136b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">linkedin.com/in/taibo-júnior-2a9b9136b/</a>
+                </div>
+            </div>
 
-  <section>
-    <h2>Skills & Certifications</h2>
-    <div class="cards">
-      <div class="card">
-        <h2>Technical Skills</h2>
-        <p><strong>Programming:</strong> Java, Python</p>
-        <p><strong>Web:</strong> HTML, CSS, React (Basics)</p>
-        <p><strong>Databases:</strong> MySQL, PostgreSQL</p>
-        <p><strong>Tools:</strong> Git, Figma, Canva</p>
-      </div>
-      <div class="card">
-        <h2>Certifications</h2>
-        <p>✔ Operating Systems Basics – CISCO</p>
-        <p>✔ Python Essentials 1 – CISCO</p>
-        <p>✔ Computer Networks & IP – NPTEL</p>
-        <p>⏳ Network Basics – CISCO</p>
-      </div>
-    </div>
-  </section>
+            <div class="hero-actions">
+                <a href="#contact" class="btn btn-primary">
+                    <i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Get in Touch
+                </a>
+                <a href="#" onclick="window.print(); return false;" class="btn btn-secondary" aria-label="Download or Print Resume">
+                    <i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i> Download PDF
+                </a>
+            </div>
+        </header>
 
-  <section>
-    <h2>Leadership & Interests</h2>
-    <div class="card">
-      <p>• Participant – Vadodara Hackathon 6.0</p>
-      <p>• Strong teamwork, critical thinking, and collaborative problem-solving skills</p>
-      <p>• Cultural Club member; interests in philosophy, history, and geopolitics</p>
-    </div>
-  </section>
+        <!-- ABOUT ME -->
+        <section class="card" aria-labelledby="about-heading">
+            <h2 id="about-heading" class="section-title">
+                <i class="fa-solid fa-user" aria-hidden="true"></i> About Me
+            </h2>
+            <p class="about-text">
+                I am a Computer Science & Engineering undergraduate with a strong foundation in core software development principles, modern frontend web technology, and networking essentials. Driven by an engineering mindset, I prioritize clean architecture, performant code, and intuitive user experiences. I actively participate in hackathons and continuously build hands-on engineering projects to bridge academic knowledge with real-world technical execution.
+            </p>
+        </section>
 
-  <footer>
-    <p>© 2026 · Designed & built by Taibo Junior</p>
-  </footer>
-</div>
+        <!-- EDUCATION -->
+        <section class="card" aria-labelledby="education-heading">
+            <h2 id="education-heading" class="section-title">
+                <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> Education
+            </h2>
+            <div class="education-header">
+                <div>
+                    <div class="institution">Parul University</div>
+                    <div class="degree">Bachelor of Technology in Computer Science & Engineering</div> <!-- -->
+                </div>
+                <div class="grad-date">Expected Graduation: 2028</div>
+            </div>
+            
+            <div class="coursework-title">Relevant Coursework:</div>
+            <div class="coursework-pills">
+                <span class="pill">Software Engineering</span>
+                <span class="pill">Computer Networks</span>
+                <span class="pill">Operating Systems</span>
+                <span class="pill">Database Management Systems (DBMS)</span>
+            </div>
+        </section>
+
+        <!-- FEATURED PROJECT -->
+        <section class="card project-card" aria-labelledby="project-heading">
+            <div class="project-header">
+                <h2 id="project-heading" class="section-title" style="margin-bottom: 0;">
+                    <i class="fa-solid fa-code-branch" aria-hidden="true"></i> Featured Project
+                </h2>
+            </div>
+            
+            <div>
+                <h3 class="project-title">Attendance Hunters</h3>
+                <p class="project-description" style="margin-top: 0.25rem;">
+                    A streamlined, developer-friendly application designed to track, manage, and analyze student academic attendance efficiently.
+                </p>
+            </div>
+
+            <div>
+                <strong style="font-size: 0.875rem; color: var(--text-main);">Key Features:</strong>
+                <ul class="features-list">
+                    <li>A secure, blockchain-backed platform designed to issue, store, and verify academic and professional certificates with full data integrity.</li>
+                    <li>Streamlined REST API for issuing and validating certificates in real time.</li>
+                    <li>Containerized backend architecture for consistent, scalable deployment.</li>
+                </ul>
+            </div>
+
+            <div>
+                <strong style="font-size: 0.875rem; color: var(--text-main); display: block; margin-bottom: 0.375rem;">Technology Stack:</strong>
+                <div class="project-tech">
+                    <span class="pill">JavaScript</span>
+                    <span class="pill">Node.js</span>
+                    <span class="pill">Express.js</span>
+                    <span class="pill">PostgreSQL</span>
+                    <span class="pill">HTML5/CSS3</span>
+                </div>
+            </div>
+            
+
+            <div class="project-actions">
+                <a href="https://attendance-fullstack-obg8.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" aria-label="Live Demo of Attendance Hunters">
+                    <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Live Demo
+                </a>
+                <a href="https://github.com/TJunior03/attendance-hunters" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" aria-label="GitHub Repository of Attendance Hunters">
+                    <i class="fa-brands fa-github" aria-hidden="true"></i> GitHub Repo
+                </a>
+            </div>
+
+            <div>
+                <h3 class="project-title">CertChain</h3>
+                <p class="project-description" style="margin-top: 0.25rem;">
+                    A secure, blockchain-backed platform designed to issue, store, and verify academic and professional certificates with full data integrity.
+                </p>
+            </div>
+
+            <div>
+                <strong style="font-size: 0.875rem; color: var(--text-main);">Key Features:</strong>
+                <ul class="features-list">
+                    <li>Real-time tracking and statistical calculations of attendance metrics.</li>
+                    <li>Intuitive user portal for fast logging and monitoring.</li>
+                    <li>Robust database schema ensuring consistent operational data integrity.</li>
+                </ul>
+            </div>
+
+            <div>
+                <strong style="font-size: 0.875rem; color: var(--text-main); display: block; margin-bottom: 0.375rem;">Technology Stack:</strong>
+                <div class="project-tech">
+                    <span class="pill">Django</span>
+                    <span class="pill">PostgreSQL</span>
+                    <span class="pill">Docker</span>
+                    <span class="pill">Ethereum</span>
+                    <span class="pill">Solidity</span>
+                    <span class="pill">Web3.py</span>
+                </div>
+            </div>
+            
+            <div>⚠️ In Development (Live Project not availabe yet)</div>
+
+            <div class="project-actions">
+                <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary" aria-label="Live Demo of Attendance Hunters">
+                    <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Live Demo
+                </a>
+                <a href="https://github.com/TJunior03/certchain" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" aria-label="GitHub Repository of Attendance Hunters">
+                    <i class="fa-brands fa-github" aria-hidden="true"></i> GitHub Repo
+                </a>
+            </div>
+        </section>
+
+        <!-- TECHNICAL SKILLS -->
+        <section class="card" aria-labelledby="skills-heading">
+            <h2 id="skills-heading" class="section-title">
+                <i class="fa-solid fa-laptop-code" aria-hidden="true"></i> Technical Skills
+            </h2>
+            <div class="skills-grid">
+                <div>
+                    <div class="skill-category-title">Languages</div>
+                    <div class="skill-pills">
+                        <span class="pill">Java</span>
+                        <span class="pill">Python</span>
+                        <span class="pill">JavaScript</span>
+                        <span class="pill">SQL</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="skill-category-title">Frontend</div>
+                    <div class="skill-pills">
+                        <span class="pill">HTML5</span>
+                        <span class="pill">CSS3</span>
+                        <span class="pill">React</span>
+                        <span class="pill">Tailwind CSS</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="skill-category-title">Backend & DB</div>
+                    <div class="skill-pills">
+                        <span class="pill">Node.js</span>
+                        <span class="pill">Express.js</span>
+                        <span class="pill">PostgreSQL</span>
+                        <span class="pill">MySQL</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="skill-category-title">Tools & Design</div>
+                    <div class="skill-pills">
+                        <span class="pill">Git</span>
+                        <span class="pill">GitHub</span>
+                        <span class="pill">VS Code</span>
+                        <span class="pill">Figma</span>
+                        <span class="pill">Canva</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CERTIFICATIONS -->
+        <section class="card" aria-labelledby="certifications-heading">
+            <h2 id="certifications-heading" class="section-title">
+                <i class="fa-solid fa-certificate" aria-hidden="true"></i> Certifications
+            </h2>
+            <div class="cert-grid">
+                <div class="cert-card">
+                    <i class="fa-solid fa-network-wired cert-icon" aria-hidden="true"></i>
+                    <div>
+                        <div class="cert-name">Cisco Operating Systems Basics</div>
+                        <div class="cert-status">Verified Certificate</div>
+                    </div>
+                </div>
+                <div class="cert-card">
+                    <i class="fa-brands fa-python cert-icon" aria-hidden="true"></i>
+                    <div>
+                        <div class="cert-name">Cisco Python Essentials 1</div>
+                        <div class="cert-status">Verified Certificate</div>
+                    </div>
+                </div>
+                <div class="cert-card">
+                    <i class="fa-solid fa-certificate cert-icon" aria-hidden="true"></i>
+                    <div>
+                        <div class="cert-name">EF SET English Certificate</div>
+                        <div class="cert-status">Verified Certificate</div>
+                    </div>
+                </div>
+                <div class="cert-card">
+                    <i class="fa-solid fa-award cert-icon" aria-hidden="true"></i>
+                    <div>
+                        <div class="cert-name">NPTEL Computer Networks & IP</div>
+                        <div class="cert-status">Verified Certificate</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ACHIEVEMENTS -->
+        <section class="card" aria-labelledby="achievements-heading">
+            <h2 id="achievements-heading" class="section-title">
+                <i class="fa-solid fa-trophy" aria-hidden="true"></i> Achievements
+            </h2>
+            <div>
+                <strong style="font-size: 1rem; color: var(--text-main); display: block;">Vadodara Hackathon 6.0</strong>
+                <p class="achievement-text" style="margin-top: 0.25rem;">
+                    Participated in an intensive competitive hackathon, collaborating in a team environment to design, prototype, and present a functional software solution addressing real-world problem statements under strict time constraints.
+                </p>
+            </div>
+        </section>
+
+        <!-- TWO COLUMN: SOFT SKILLS & LANGUAGES -->
+        <div class="two-column-grid">
+            <section class="card" aria-labelledby="soft-skills-heading">
+                <h2 id="soft-skills-heading" class="section-title">
+                    <i class="fa-solid fa-users" aria-hidden="true"></i> Soft Skills
+                </h2>
+                <div class="skill-pills">
+                    <span class="pill">Communication</span>
+                    <span class="pill">Problem Solving</span>
+                    <span class="pill">Adaptability</span>
+                    <span class="pill">Critical Thinking</span>
+                    <span class="pill">Teamwork</span>
+                </div>
+            </section>
+
+            <section class="card" aria-labelledby="languages-heading">
+                <h2 id="languages-heading" class="section-title">
+                    <i class="fa-solid fa-globe" aria-hidden="true"></i> Languages
+                </h2>
+                <div class="skill-pills">
+                    <span class="pill">English</span>
+                    <span class="pill">Portuguese</span>
+                </div>
+            </section>
+        </div>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="card contact-card" aria-labelledby="contact-heading">
+            <h2 id="contact-heading" class="section-title">
+                <i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Let's Connect
+            </h2>
+            <p>
+                I am actively seeking software engineering and cloud network internship opportunities. Feel free to reach out directly via email or connect with me on social platforms.
+            </p>
+            <div class="contact-buttons">
+                <a href="mailto:taibojunior190@gmail.com" class="btn btn-primary" aria-label="Email Me">
+                    <i class="fa-solid fa-envelope" aria-hidden="true"></i> Email Me
+                </a>
+                <a href="https://github.com/TJunior03" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" aria-label="GitHub Profile">
+                    <i class="fa-brands fa-github" aria-hidden="true"></i> GitHub
+                </a>
+                <a href="https://linkedin.com/in/taibo-júnior-2a9b9136b/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" aria-label="LinkedIn Profile">
+                    <i class="fa-brands fa-linkedin" aria-hidden="true"></i> LinkedIn
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Taibo Junior. Handcrafted with HTML & CSS.</p> <!-- -->
+    </footer>
 
 </body>
 </html>
