@@ -64,12 +64,15 @@
         </div>
 
         <div class="profile-text">
-          <p class="roles">UI/UX Design • Web Developer • Network Engineer</p>
+          <p class="roles">Backend Developer • Cloud & Networking Enthusiast • Computer Science Student</p>
           <h1>Taibo Junior</h1>
 
           <p class="bio">
-           I'm an aspiring UI/UX designer, web developer, and network engineer, currently building my skills and exploring new technologies. My goal is to become a cloud network engineer, and I'm always open to learning and growing. I'm not a pro yet, but with time, dedication, and hands-on experience, I'm gaining more confidence and knowledge every day.
-          </p>
+           I'm a Computer Science student from Mozambique currently studying in India, passionate about building reliable software, backend systems, and cloud infrastructure.
+
+          I enjoy turning ideas into practical solutions through modern technologies while continuously expanding my knowledge in Cloud Computing, Networking, and Artificial Intelligence.
+
+        My long-term goal is to become a Cloud & Network Engineer, building secure, scalable, and impactful systems.
 
           <div class="buttons">
             <a href="internship_resume_taibo_junior.html" class="download">Resume</a>
@@ -89,9 +92,10 @@
 
     <div class="about-text">
       <h2>Who I am</h2>
-      <p>I’m Taibo Junior, originally from Tete, Mozambique, and currently pursuing a degree in Computer Science and Engineering at Parul University in Gujarat, India. </p>
-      <p>I'm passionate about technology and constantly working to improve my skills in UI/UX design, web development, and network engineering. </p>
-      <p>Beyond the tech world, I have a deep interest in history, philosophy, and geo-politics — subjects that help me understand the world from different perspectives and fuel my curiosity for lifelong learning</p>
+      <p>I'm Taibo Ahamada Taibo Junior, a Computer Science student from Mozambique currently pursuing my Bachelor's degree at Parul University in Gujarat, India.</p>
+      <p>I'm passionate about software development, backend engineering, cloud computing, and computer networking. I enjoy building practical projects that strengthen my technical skills while solving real-world problems through technology.</p>
+      <p>Outside of programming, I'm deeply interested in history, philosophy, and geopolitics. These subjects broaden my perspective, strengthen my critical thinking, and inspire me to approach technology with curiosity and a long-term mindset.</p>
+      <p>I'm always eager to learn new technologies, collaborate on meaningful projects, and continue growing as a future Cloud & Network Engineer.</p>
     </div>
 
     <div class="about-illustration">
@@ -151,18 +155,22 @@
       <div class="skill-card"><i class="fa-brands fa-html5"></i> HTML</div>
       <div class="skill-card"><i class="fa-brands fa-css3-alt"></i> CSS</div>
       <div class="skill-card"><i class="fa-solid fa-c"></i> C</div>
+      <div class="skill-card"><i class="fa-brands fa-python"></i> Python</div>
+      <div class="skill-card"><i class="fa-brands fa-linux"></i> Linux</div>
     </div>
 
     <!-- Column 2 -->
     <div class="skills-column">
-      <div class="skill-card"><i class="fa-solid fa-code"></i> C++</div>
+      <div class="skill-card"><i class="fa-solid fa-cpp"></i> C++</div>
       <div class="skill-card"><i class="fa-solid fa-database"></i> MySQL</div>
       <div class="skill-card"><i class="fa-solid fa-database"></i> PostgreSQL</div>
       <div class="skill-card"><i class="fa-brands fa-git-alt"></i> Git</div>
+      <div class="skill-card"><i class="fa-brands fa-docker"></i> Docker</div>
     </div>
 
     <!-- Column 3 -->
     <div class="skills-column">
+      <div class="skill-card"><i class="fa-brands fa-python"></i> Django</div>
       <div class="skill-card"><i class="fa-brands fa-github"></i> GitHub</div>
       <div class="skill-card"><i class="fa-solid fa-code"></i> VS Code</div>
       <div class="skill-card"><i class="fa-brands fa-figma"></i> Figma</div>
@@ -185,6 +193,22 @@
       </div>
 
      <button class="project-link" aria-label="View Project" onclick="openProjectModal()">
+      <i class="fa-solid fa-arrow-right"></i>
+      </button>
+
+
+  </div>
+
+  <div class="projects-container">
+
+    <div class="project-card">
+      <h3 class="project-title">CertChain</h3>
+
+      <div class="project-icon">
+        <i class="fa-solid fa-chain"></i>
+      </div>
+
+     <button class="project-link" aria-label="View Project" onclick="openCertChainModal()">
       <i class="fa-solid fa-arrow-right"></i>
       </button>
 
@@ -253,6 +277,21 @@
       </div>
 
       <a href="NOC26CS35S258540381504258653.pdf" class="cert-link">
+        View Certificate →
+      </a>
+    </div>
+
+    <!-- CERT 5  -->
+    <div class="cert-card">
+      <div class="cert-header">
+        <h3>EF SET<br>English Certificate</h3>
+
+        <div class="cert-badge">
+          <img src="Icons (development)/efset.jpg" alt="Linux">
+        </div>
+      </div>
+
+      <a href="https://cert.efset.org/en/gVjazm" class="cert-link">
         View Certificate →
       </a>
     </div>
@@ -347,6 +386,16 @@
     document.getElementById("projectModal").style.display = "none";
     document.body.classList.remove("modal-open");
   }
+
+  function openCertChainModal() {
+  document.getElementById("certchainModal").style.display = "flex";
+  document.body.classList.add("modal-open");
+}
+
+function closeCertChainModal() {
+  document.getElementById("certchainModal").style.display = "none";
+  document.body.classList.remove("modal-open");
+}
 </script>
 
 <!-- ================= PROJECT MODAL ================= -->
@@ -385,6 +434,42 @@
         Live Project
       </a>
       <a href="https://github.com/TJunior03/attendance-hunters" target="_blank" class="modal-btn secondary">
+        GitHub Repo
+      </a>
+    </div>
+  </div>
+
+</div>
+
+<!-- ================= CERTCHAIN MODAL ================= -->
+<div id="certchainModal" class="modal-overlay">
+
+  <div class="modal-box">
+    <span class="modal-close" onclick="closeCertChainModal()">&times;</span>
+
+    <h2>CertChain</h2>
+
+    <p class="modal-description">
+      CertChain is a blockchain-based certificate verification platform built to
+      confirm the authenticity of academic and professional certificates.
+      It stores certificate hashes on-chain, allowing anyone to verify a
+      document's validity without relying on a central authority.
+    </p>
+
+    <h3>Tech Stack</h3>
+    <ul>
+      <li>Backend: Django, Django REST Framework</li>
+      <li>Database: PostgreSQL</li>
+      <li>Blockchain: Ethereum, Solidity, Ganache, Web3.py</li>
+      <li>Integrity: SHA-256 hashing</li>
+      <li>Infrastructure: Docker</li>
+    </ul>
+
+    <p>⚠️ In Development (Live Project not availabe yet)</p>
+
+    <div class="modal-actions">
+      <a href="#" target="_blank" class="modal-btn primary">Live Project</a>
+      <a href="https://github.com/TJunior03/certchain" target="_blank" class="modal-btn secondary">
         GitHub Repo
       </a>
     </div>
